@@ -1,0 +1,17 @@
+! Blocks the Ilta Sanomat promotion on the side view.
+||www.is.fi/promo/?source=hs.fi&content=promobox&darkMode=true$subdocument
+
+! Blocks the job opening ads.
+||vg.is.fi/otty-hs-etusivu/?darkMode=true$subdocument
+||vg.is.fi/otty-hs-mobiili/?darkMode=true$subdocument
+
+! Blocks the weather forecast in the main and side view.
+www.hs.fi##.widget-mainlane.weather-container
+www.hs.fi##.widget-sidelane.weather-container
+
+! Blocks "for subscribers" news in the main view and also in "most read" posts.
+www.hs.fi##a.block:has(span.paid-indicator-title)
+www.hs.fi##li.generic-list-item:has(span.paid-indicator-title)
+
+! Blocks sports news.
+www.hs.fi##a.block[href^="/urheilu"]
